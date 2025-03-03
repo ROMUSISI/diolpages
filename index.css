@@ -135,6 +135,25 @@
         min-width: 400px;
         /*just a comment*/
     }
-    
+}
 
+.image-div-container {
+   display: grid;
+   flex-wrap: wrap;  /* Allows items to wrap onto new rows */
+   gap: 50px;  /* Adds spacing between items */
+   grid-template-columns: 1fr 1fr 1fr;
+}
+
+.image-div-container .dash-image {
+    width: 100%;           /* Ensures image width is 100% of its container */
+    height: 100%;          /* Ensures image height is 100% of its container */
+    object-fit: cover;     /* Ensures the image covers the space without distortion */
+    object-position: center; /* Centers the image within its container */
+    border-radius: 8px;
+}
+
+.image-div-container div{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;  /* Ensures padding/borders do not affect the width */
 }
