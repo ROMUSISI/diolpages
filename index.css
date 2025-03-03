@@ -27,6 +27,7 @@
     border-radius: 8px;
     padding: 20px;
     border: solid rgb(178, 178, 178) 1px;
+    min-width: 250px;
 }
 
 .page-body .side-bar .membership-icon,
@@ -44,15 +45,16 @@
     padding: 50px 0px;
     margin: 0px;
     border-radius: 6px;
+    transition:  all 0.15s ease;
 }
 
-.page-body .side-bar .menu-option-div div {
+.page-body .side-bar .menu-option-div div{
     display: flex;
     justify-content: center;
     font-size: 20px;
     font-weight: 400;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    transition:  all 1s ease;
+    
 }
 
 .main-body-container-div .title-paragraph {
@@ -60,12 +62,78 @@
 }
 
 .page-body .side-bar .menu-option-div:hover {
-    background-color: rgb(223, 220, 220);
+    background-color: rgb(226, 240, 246);
     cursor: pointer;
+    color: rgb(21, 22, 40);
+    font-weight: 900;
 }
 
 .nav {
-    color: rgb(3, 108, 143);
-    border-bottom: solid 4px rgb(176, 109, 109);
-    font-size: 30px;
+    display: flex;
+    border-bottom: solid orange 3px ;
+    padding-bottom: 10px;
+    border-radius: 6px;
+}
+
+.nav .taso-logo-image-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.nav .taso-logo-image-div .taso-logo {
+    width: 50px;
+    border-radius: 25px;
+    
+}
+
+.nav .taso-label-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 60px;
+    color: rgb(2, 145, 239);
+}
+
+.nav .taso-logo-image-div {
+    margin-right: 10px;
+}
+
+@media (max-width: 800px) {
+
+
+    .page-body {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        min-width: 400px;
+        overflow-x: auto;
+    }
+
+    .page-body .side-bar .menu-option-div {
+        padding: 10px 0px 5px 0px;
+    }
+
+    .page-body .side-bar {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        min-width: 400px;
+        overflow-x: auto;
+    }
+
+    .page-body .side-bar{
+        background-color: white;
+        border-radius: 8px;
+        padding: 0px;
+        border: solid rgb(178, 178, 178);
+        border-width: 0px 0px 1px 0px;
+        min-width: 250px;
+
+    }
+
+    .nav {
+        min-width: 400px;
+    }
+    
+
 }
